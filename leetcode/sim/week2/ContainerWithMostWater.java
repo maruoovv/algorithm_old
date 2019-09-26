@@ -1,4 +1,4 @@
-package week2;
+package sim.week2;
 
 import static java.lang.Math.abs;
 

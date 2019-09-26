@@ -1,4 +1,4 @@
-package week1
+package sim.week1
 
 import java.math.BigDecimal
 import java.util.*

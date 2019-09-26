@@ -1,4 +1,4 @@
-package week2;
+package sim.week2;
 
 public class RemoveNthNode {
     public ListNode removeNthFromEnd(ListNode head, int n) {
