@@ -5,9 +5,7 @@ fun main() {
 }
 
 fun generateParenthesis(n: Int): List<String> {
-    val res = makeParenthesis(n*2, 0, "", mutableListOf())
-    println(res)
-    return res
+    return makeParenthesis(n*2, 0, "", mutableListOf())
 }
 
 fun makeParenthesis(n : Int, index : Int, cur : String, parenthesis : MutableList<String>) : MutableList<String> {
