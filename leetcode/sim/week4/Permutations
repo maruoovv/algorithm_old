@@ -1,0 +1,29 @@
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        makePermutation(nums, nums.length,0, result);
+
+        return result;
+    }
+    
+    public void makePermutation(int[] nums, int n, int start, List<List<Integer>> result) {
+
+        if (start == n - 1) {
+            result.add(Arrays.stream(nums).boxed().collect(Collectors.toList()));
+            return;
+        }
+
+        for (int i = start; i < n; i++) {
+            swap(nums, start, i);
+            makePermutation(nums, n, start + 1, result);
+            swap(nums, start, i);
+        }
+    }
+
+
+    public void swap(int[] nums, int a, int b) {
+        int tmp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = tmp;
+    }
+}
